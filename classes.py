@@ -19,6 +19,8 @@ class Violation:
 
     if not driver_id:
       raise InvalidViolationDataError("driver_id cannot be empty.")
+    if not isinstance(fine_amount, (int, float)):
+      raise InvalidViolationDataError(f"fine_amount must be a number, got {type(fine_amount).__name__}")
     if fine_amount < 0:
       raise InvalidViolationDataError("fine_amount cannot be negative.")
     if payment_status not in ["Paid", "Unpaid"]:
@@ -108,8 +110,7 @@ class Driver:
       if v.payment_status == "Unpaid")
 
   def list_of_violations(self) -> list[dict]:
-    return [v.to_dict() 
-     in self.violations]
+    return [v.to_dict() for v in self.violations]
 
   def __repr__(self):
     return (f"Driver({self.driver_id}, "f"violations={self.number_of_violations()}, "f"total_fines=${self.total_fines():.2f})")
