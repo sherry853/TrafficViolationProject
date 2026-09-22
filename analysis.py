@@ -5,6 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 from classes import InvalidViolationDataError
+# from classes import ParkingViolation # can uncomment if not doing demo on error handling
 from data import build_drivers_and_records
 
 # 1. MEASURING THE EXECUTION TIME
@@ -212,5 +213,14 @@ def run_analysis():
     print("\n" + "=" * 62)
     return df
 
+# # FOR DEMO ONLY, UNCOMMENT WHEN NOT DOING DEMO ON ERROR HANDLING
+# def demo_error_handling():
+#     print("\n--- DEMO: Error Handling ---")
+#     try:
+#         ParkingViolation("D999", -50, "Paid", 5)
+#     except InvalidViolationDataError as e:
+#         print(f"Rejected as expected: {e}")
+
 if __name__ == "__main__":
     run_analysis()
+    # demo_error_handling() # can uncomment when not doing demo on error handling
