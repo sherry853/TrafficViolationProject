@@ -107,7 +107,7 @@ def violations_per_type(df, file_path="graphs/violations_per_type.png"):
     plt.figure(figsize=(10, 5))
     bars = plt.bar(violation_counts.index, violation_counts.values, color="slategray", edgecolor="black")
     plt.bar_label(bars)
-    plt.title("Number of Violations by Type")
+    plt.title("Number of Violations per Type")
     plt.xlabel("Violation Type")
     plt.ylabel("Number of Violations")
     plt.tight_layout()

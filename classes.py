@@ -4,6 +4,12 @@
 # In[ ]:
 
 
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
 # Error handling
 class InvalidViolationDataError(Exception):
     ""
@@ -114,5 +120,4 @@ class Driver:
 
   def __repr__(self):
     return (f"Driver({self.driver_id}, "f"violations={self.number_of_violations()}, "f"total_fines=${self.total_fines():.2f})")
-
 
