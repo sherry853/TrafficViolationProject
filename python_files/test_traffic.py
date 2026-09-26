@@ -1,11 +1,11 @@
 import unittest
 import pandas as pd
 
-from classes import (
+from python_files.classes import (
     Violation, SpeedingViolation, ParkingViolation, SignalJumpViolation, Driver, InvalidViolationDataError
 )
 
-from analysis import (
+from python_files.analysis import (
     build_dataframe, validate_dataframe, summary_statistics, find_repeat_offenders
 )
 

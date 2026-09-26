@@ -4,9 +4,9 @@ from functools import wraps
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from classes import InvalidViolationDataError
+from python_files.classes import InvalidViolationDataError
 # from classes import ParkingViolation # can uncomment if not doing demo on error handling
-from data import build_drivers_and_records
+from python_files.data import build_drivers_and_records
 
 # 1. MEASURING THE EXECUTION TIME
 def timed(func):
